@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "My Chrome Pet",
+  "version": "1.0.0",
+  "description": "A Chrome extension that adds a virtual pet to your browser.",
+  "permissions": [ "storage" ],
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ],
+      "css": [ "style.css" ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "idle.png", "happy.png" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}

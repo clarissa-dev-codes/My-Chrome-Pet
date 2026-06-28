@@ -1,0 +1,37 @@
+#custom-chrome-pet {
+    position: fixed !important;
+    bottom: 0px !important;
+    left: 5px !important;
+    width: 128px !important;
+    height: 128px !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    transform: none;
+    transition: left 0.5s ease, top 0.5s ease !important;
+}
+
+.floating-element {
+    /* Starts immediately on page load */
+    animation-name: floatGentle;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* Performance optimization for smooth rendering */
+    will-change: transform;
+    display: inline-block;
+}
+
+@keyframes floatGentle {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px); /* Peak height */
+    }
+
+    100% {
+        transform: translateY(0); /* Return position */
+    }
+}
